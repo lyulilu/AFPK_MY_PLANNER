@@ -89,11 +89,13 @@ div[data-testid="stMarkdownContainer"] h2,div[data-testid="stMarkdownContainer"]
  [data-testid="stMetricValue"] {font-size:1.35rem;}
  [data-testid="stHorizontalBlock"] {gap:.65rem;flex-wrap:wrap!important;}
  [data-testid="stColumn"], [data-testid="column"] {flex:1 1 100%!important;min-width:0!important;width:100%!important;}
+ 
 }
 /* 초록색 화살표 옆 글씨만 검은색으로 변경 */
 [data-testid="stMetricDelta"] > div:last-child {
     color: #000000 !important;
 }
+
 </style>""", unsafe_allow_html=True)
 
 
