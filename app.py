@@ -78,6 +78,43 @@ div[data-testid="stMarkdownContainer"] h2,div[data-testid="stMarkdownContainer"]
 [data-testid="stText"] {color:#FFFFFF;}
 /* 기본 테마의 진회색 보조 설명만 밝은 회색으로 표시 */
 [data-testid="stCaptionContainer"],
+
+/* ========================================
+   1. 왼쪽 상단 >> 아이콘 흰색 변경
+   ======================================== */
+
+[data-testid="collapsedControl"],
+[data-testid="collapsedControl"] button,
+[data-testid="collapsedControl"] svg,
+[data-testid="stSidebarCollapsedControl"],
+[data-testid="stSidebarCollapsedControl"] button,
+[data-testid="stSidebarCollapsedControl"] svg {
+    color: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+}
+
+[data-testid="stSidebarCollapseButton"] svg {
+    color: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+}
+
+/* ========================================
+   2. Streamlit 기본 하단 위젯 숨기기
+   ======================================== */
+
+[data-testid="stStatusWidget"],
+[data-testid="stDecoration"] {
+    display: none !important;
+}
+
+/* ========================================
+   3. Streamlit 기본 메뉴 숨기기
+   ======================================== */
+
+#MainMenu {
+    visibility: hidden !important;
+}
+
 [data-testid="stCaptionContainer"] p,
 [data-testid="InputInstructions"] {color:#D1D5DB;}
 @media (max-width: 680px) {
