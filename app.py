@@ -89,6 +89,23 @@ div[data-testid="stMarkdownContainer"] h2,div[data-testid="stMarkdownContainer"]
  [data-testid="stMetricValue"] {font-size:1.35rem;}
  [data-testid="stHorizontalBlock"] {gap:.65rem;flex-wrap:wrap!important;}
  [data-testid="stColumn"], [data-testid="column"] {flex:1 1 100%!important;min-width:0!important;width:100%!important;}
+}
+/* Sidebar toggle icon: collapsed and expanded states */
+[data-testid="stSidebarCollapsedControl"] button,
+[data-testid="stSidebarCollapseButton"] button,
+[data-testid="stExpandSidebarButton"] button,
+[data-testid="stSidebarNavCollapseButton"] button,
+[data-testid="stHeader"] button[aria-label*="sidebar" i] {
+  color: #87CEFA !important;
+}
+[data-testid="stSidebarCollapsedControl"] svg,
+[data-testid="stSidebarCollapseButton"] svg,
+[data-testid="stExpandSidebarButton"] svg,
+[data-testid="stSidebarNavCollapseButton"] svg,
+[data-testid="stHeader"] button[aria-label*="sidebar" i] svg {
+  color: #87CEFA !important;
+  stroke: #87CEFA !important;
+}
 
 </style>""", unsafe_allow_html=True)
 
