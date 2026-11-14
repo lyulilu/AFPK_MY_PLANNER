@@ -77,6 +77,10 @@ div[data-testid="stMarkdownContainer"] h2,div[data-testid="stMarkdownContainer"]
 [data-testid="stExpander"] summary p,
 [data-testid="stText"] {color:#FFFFFF;}
 /* 기본 테마의 진회색 보조 설명만 밝은 회색으로 표시 */
+/* 초록색 화살표 옆 글씨만 검은색으로 변경 */
+[data-testid="stMetricDelta"] > div:last-child {
+    color: #000000 !important;
+}
 [data-testid="stCaptionContainer"],
 [data-testid="stCaptionContainer"] p,
 [data-testid="InputInstructions"] {color:#D1D5DB;}
