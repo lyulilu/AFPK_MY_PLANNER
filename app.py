@@ -89,6 +89,16 @@ div[data-testid="stMarkdownContainer"] h2,div[data-testid="stMarkdownContainer"]
  [data-testid="stMetricValue"] {font-size:1.35rem;}
  [data-testid="stHorizontalBlock"] {gap:.65rem;flex-wrap:wrap!important;}
  [data-testid="stColumn"], [data-testid="column"] {flex:1 1 100%!important;min-width:0!important;width:100%!important;}
+
+}
+
+/* 사이드바 펼치기 >> 아이콘 연하늘색 */
+button[data-testid="stExpandSidebarButton"] span[data-testid="stIconMaterial"] {
+    color: #87CEFA !important;
+    -webkit-text-fill-color: #87CEFA !important;
+}
+
+</style>""", unsafe_allow_html=True)
 }
 /* Sidebar toggle icon: collapsed and expanded states */
 [data-testid="stSidebarCollapsedControl"] button,
