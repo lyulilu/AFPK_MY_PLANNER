@@ -68,6 +68,18 @@ html, body, [data-testid="stAppViewContainer"], .stApp {background:#071427; colo
        border:1px solid #286C8B;border-radius:999px;padding:5px 11px;margin:6px 0 13px;}
 .sci {color:#94B4CD;font-size:.79rem;line-height:1.75;}
 div[data-testid="stMarkdownContainer"] h2,div[data-testid="stMarkdownContainer"] h3 {color:#EAF4FF;}
+/* 기본 테마의 검은색 본문·메뉴·입력 라벨만 흰색으로 표시 */
+[data-testid="stMarkdownContainer"]:not([data-testid="stAlert"] [data-testid="stMarkdownContainer"]) > p,
+[data-testid="stMarkdownContainer"]:not([data-testid="stAlert"] [data-testid="stMarkdownContainer"]) > ul,
+[data-testid="stMarkdownContainer"]:not([data-testid="stAlert"] [data-testid="stMarkdownContainer"]) > ol,
+[data-testid="stWidgetLabel"] p,
+[data-testid="stSidebar"] [role="radiogroup"] label p,
+[data-testid="stExpander"] summary p,
+[data-testid="stText"] {color:#FFFFFF;}
+/* 기본 테마의 진회색 보조 설명만 밝은 회색으로 표시 */
+[data-testid="stCaptionContainer"],
+[data-testid="stCaptionContainer"] p,
+[data-testid="InputInstructions"] {color:#D1D5DB;}
 @media (max-width: 680px) {
  .block-container {padding:1.05rem .9rem 2.8rem;}
  .hero {padding:20px 17px;border-radius:15px;}
