@@ -90,6 +90,14 @@ div[data-testid="stMarkdownContainer"] h2,div[data-testid="stMarkdownContainer"]
  [data-testid="stHorizontalBlock"] {gap:.65rem;flex-wrap:wrap!important;}
  [data-testid="stColumn"], [data-testid="column"] {flex:1 1 100%!important;min-width:0!important;width:100%!important;}
 
+/* 사이드바 펼치기 >> 버튼을 연하늘색으로 변경 */
+[data-testid="stSidebarCollapsedControl"] svg,
+[data-testid="stSidebarCollapseButton"] svg,
+[data-testid="stExpandSidebarButton"] svg {
+    color: #87CEFA !important;
+    stroke: #87CEFA !important;
+}
+
 </style>""", unsafe_allow_html=True)
 
 
