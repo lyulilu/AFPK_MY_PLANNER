@@ -84,37 +84,12 @@ div[data-testid="stMarkdownContainer"] h2,div[data-testid="stMarkdownContainer"]
  [data-testid="stColumn"], [data-testid="column"] {flex:1 1 100%!important;min-width:0!important;width:100%!important;}
 }
 
-/* Dark-text correction only: keep existing navy, cyan, mint, gold and muted typography. */
-[data-testid="stAppViewContainer"] [data-testid="stWidgetLabel"] p,
-[data-testid="stSidebar"] [data-testid="stWidgetLabel"] p,
-[data-testid="stAppViewContainer"] [data-testid="stMetricLabel"] p,
-[data-testid="stAppViewContainer"] [data-testid="stMetricValue"],
-[data-testid="stAppViewContainer"] [data-testid="stMetricDelta"] {
+/* FIX: default dark input text only; dashboard, metrics, navigation and charts untouched. */
+[data-testid="stTextInput"] input,
+[data-testid="stNumberInput"] input,
+[data-testid="stTextArea"] textarea {
     color: #FFFFFF !important;
-}
-/* Streamlit controls whose default text can appear dark on navy backgrounds. */
-[data-testid="stAppViewContainer"] [data-baseweb="input"] input,
-[data-testid="stAppViewContainer"] [data-baseweb="textarea"] textarea,
-[data-testid="stAppViewContainer"] [data-baseweb="select"] input,
-[data-testid="stAppViewContainer"] [data-baseweb="select"] [role="combobox"],
-[data-testid="stAppViewContainer"] [data-baseweb="select"] [role="combobox"] span,
-[data-testid="stAppViewContainer"] [data-testid="stRadio"] label p,
-[data-testid="stSidebar"] [data-testid="stRadio"] label p,
-[data-testid="stAppViewContainer"] [data-testid="stExpander"] summary,
-[data-testid="stAppViewContainer"] [data-testid="stExpander"] summary p {
-    color: #FFFFFF !important;
-    -webkit-text-fill-color: #FFFFFF;
-}
-/* Keep inputs dark so corrected white text remains readable. */
-[data-testid="stAppViewContainer"] [data-baseweb="input"],
-[data-testid="stAppViewContainer"] [data-baseweb="textarea"],
-[data-testid="stAppViewContainer"] [data-baseweb="select"] > div {
-    background-color: #112640;
-}
-/* Secondary buttons only; primary blue styling is unchanged. */
-[data-testid="stAppViewContainer"] button[kind="secondary"],
-[data-testid="stAppViewContainer"] button[data-testid="stBaseButton-secondary"] {
-    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
 }
 </style>""", unsafe_allow_html=True)
 
