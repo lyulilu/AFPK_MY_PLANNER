@@ -83,6 +83,39 @@ div[data-testid="stMarkdownContainer"] h2,div[data-testid="stMarkdownContainer"]
  [data-testid="stHorizontalBlock"] {gap:.65rem;flex-wrap:wrap!important;}
  [data-testid="stColumn"], [data-testid="column"] {flex:1 1 100%!important;min-width:0!important;width:100%!important;}
 }
+
+/* White typography throughout MY PLANNER; preserve navy surfaces */
+.stApp, [data-testid="stSidebar"] {color:#FFFFFF!important;}
+.stApp [data-testid="stMarkdownContainer"],
+.stApp [data-testid="stMarkdownContainer"] :is(p,li,h1,h2,h3,h4,h5,h6),
+.stApp [data-testid="stWidgetLabel"] p,
+.stApp [data-testid="stCaptionContainer"] p,
+.stApp [data-testid="stMetricLabel"],
+.stApp [data-testid="stMetricValue"],
+.stApp [data-testid="stMetricDelta"],
+.stApp [data-testid="stExpander"] summary,
+.stApp [role="radiogroup"] label,
+.stApp [data-baseweb="tab"],
+.stApp .hero :is(h1,p), .stApp .eyebrow, .stApp .brand,
+.stApp .brand .dot, .stApp .mini, .stApp .callout,
+.stApp .pill, .stApp .sci {color:#FFFFFF!important;}
+/* Dark fields ensure white labels remain readable */
+.stApp [data-baseweb="input"],
+.stApp [data-baseweb="textarea"],
+.stApp [data-baseweb="select"] > div,
+.stApp [data-baseweb="base-input"],
+.stApp textarea {background-color:#142B46!important;color:#FFFFFF!important;}
+.stApp input, .stApp textarea,
+.stApp [data-baseweb="select"] span {color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF;}
+.stApp input::placeholder, .stApp textarea::placeholder {color:#D8E6F5!important;opacity:1;}
+.stApp .stButton > button,
+.stApp [data-testid="stFormSubmitButton"] button,
+.stApp [data-testid="stDownloadButton"] button,
+.stApp [data-testid="stBaseButton-secondary"] {color:#FFFFFF!important;border-color:#42617E;}
+.stApp button :is(p,span) {color:#FFFFFF!important;}
+.stApp [data-testid="stAlert"] p,
+.stApp [data-testid="stProgress"] p,
+.stApp [data-testid="stFileUploader"] p {color:#FFFFFF!important;}
 </style>""", unsafe_allow_html=True)
 
 
@@ -109,7 +142,7 @@ def dark_fig(fig, height=315):
     fig.update_layout(
         height=height,
         paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
-        font=dict(color="#C9DDEE", family="Arial"),
+        font=dict(color="#FFFFFF", family="Arial"),
         margin=dict(l=15, r=15, t=18, b=25),
         legend=dict(orientation="h", yanchor="bottom", y=1.03, xanchor="left", x=0),
         hoverlabel=dict(bgcolor="#15334F",font_color="white"),
