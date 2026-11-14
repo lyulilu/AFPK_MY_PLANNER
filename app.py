@@ -90,10 +90,17 @@ div[data-testid="stMarkdownContainer"] h2,div[data-testid="stMarkdownContainer"]
  [data-testid="stHorizontalBlock"] {gap:.65rem;flex-wrap:wrap!important;}
  [data-testid="stColumn"], [data-testid="column"] {flex:1 1 100%!important;min-width:0!important;width:100%!important;}
  
-}
-/* 초록색 화살표 옆 글씨만 검은색으로 변경 */
-[data-testid="stMetricDelta"] > div:last-child {
+/* 목표 대비 금액 글씨만 검은색 */
+[data-testid="stMetricDelta"] [data-testid="stMetricDeltaIcon"] ~ div,
+[data-testid="stMetricDelta"] p,
+[data-testid="stMetricDelta"] span {
     color: #000000 !important;
+}
+
+/* 화살표 색상은 초록색 유지 */
+[data-testid="stMetricDelta"] svg {
+    color: #008060 !important;
+    fill: none !important;
 }
 
 </style>""", unsafe_allow_html=True)
