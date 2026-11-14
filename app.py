@@ -90,30 +90,6 @@ div[data-testid="stMarkdownContainer"] h2,div[data-testid="stMarkdownContainer"]
  [data-testid="stHorizontalBlock"] {gap:.65rem;flex-wrap:wrap!important;}
  [data-testid="stColumn"], [data-testid="column"] {flex:1 1 100%!important;min-width:0!important;width:100%!important;}
 
-/* 사이드바 열기/닫기 버튼 연하늘색 */
-[data-testid="stSidebarCollapsedControl"] button,
-[data-testid="stSidebarCollapseButton"] button,
-[data-testid="stExpandSidebarButton"] button,
-button[aria-label="Open sidebar"],
-button[aria-label="Close sidebar"] {
-    color: #87CEFA !important;
-}
-
-[data-testid="stSidebarCollapsedControl"] svg,
-[data-testid="stSidebarCollapseButton"] svg,
-[data-testid="stExpandSidebarButton"] svg,
-button[aria-label="Open sidebar"] svg,
-button[aria-label="Close sidebar"] svg {
-    color: #87CEFA !important;
-    stroke: #87CEFA !important;
-}
-
-[data-testid="stSidebarCollapsedControl"] svg path,
-[data-testid="stSidebarCollapseButton"] svg path,
-[data-testid="stExpandSidebarButton"] svg path {
-    stroke: #87CEFA !important;
-}
-
 </style>""", unsafe_allow_html=True)
 
 
