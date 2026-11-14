@@ -222,8 +222,30 @@ def dashboard(assets, budgets, goals, settings):
                 Scenario(months=primary["months"],safe_return_pct=settings["safe_return_pct"],
                          risk_return_pct=settings["risk_return_pct"]))
             chart_forecast(base, target_won=primary["target_won"])
-            st.metric(f'「{primary["name"]}」 예상 달성액', manwon(base.final_won),
-                      delta=f'목표 대비 {manwon(base.difference_won)}', delta_color="normal")
+            delta_value = base.difference_won
+            arrow = "▲" if delta_value >= 0 else "▼"
+            arrow_color = "#00A36C" if delta_value >= 0 else "#FF6B6B"
+            st.markdown(
+                f"""
+                <div style="background:#112640;border:1px solid #2B4360;
+                            border-radius:15px;padding:1.05rem 1.1rem;">
+                    <div style="color:#9EB7CF;font-size:0.875rem;">
+                        「{escape(primary['name'])}」 예상 달성액
+                    </div>
+                    <div style="color:#F2FAFF;font-size:2rem;font-weight:760;">
+                        {escape(manwon(base.final_won))}
+                    </div>
+                    <div style="margin-top:5px;font-size:0.875rem;">
+                        <span style="color:{arrow_color};">{arrow}</span>
+                        <span style="color:#000000;background:#DDF8ED;
+                                     border-radius:5px;padding:2px 5px;">
+                            목표 대비 {escape(manwon(delta_value))}
+                        </span>
+                    </div>
+                </div>
+                """,
+                unsafe_allow_html=True
+            )
             checkpoints = [m for m in range(12, primary["months"] + 1, 12)]
             if primary["months"] not in checkpoints:
                 checkpoints.append(primary["months"])
