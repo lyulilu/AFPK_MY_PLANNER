@@ -36,6 +36,11 @@ WHITE = "#EAF4FF"
 ORANGE = "#F59E83"
 
 st.markdown("""<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+[data-testid="stToolbar"] {visibility: hidden;}
+[data-testid="stDecoration"] {display: none;}
+[data-testid="stStatusWidget"] {display: none;}
 :root { color-scheme: dark; }
 html, body, [data-testid="stAppViewContainer"], .stApp {background:#071427; color:#EAF4FF;}
 [data-testid="stHeader"] {background:rgba(7,20,39,.88);}
