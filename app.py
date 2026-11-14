@@ -90,18 +90,6 @@ div[data-testid="stMarkdownContainer"] h2,div[data-testid="stMarkdownContainer"]
  [data-testid="stHorizontalBlock"] {gap:.65rem;flex-wrap:wrap!important;}
  [data-testid="stColumn"], [data-testid="column"] {flex:1 1 100%!important;min-width:0!important;width:100%!important;}
 
-/* 증감 금액의 글씨를 검은색으로 변경 */
-[data-testid="stMetricDelta"] *:not(svg):not(path) {
-    color: #000000 !important;
-    -webkit-text-fill-color: #000000 !important;
-}
-
-/* 초록색 화살표는 기존 색상 유지 */
-[data-testid="stMetricDelta"] svg {
-    color: #008060 !important;
-    stroke: #008060 !important;
-}
-
 </style>""", unsafe_allow_html=True)
 
 
