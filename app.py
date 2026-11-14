@@ -36,11 +36,6 @@ WHITE = "#EAF4FF"
 ORANGE = "#F59E83"
 
 st.markdown("""<style>
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-[data-testid="stToolbar"] {visibility: hidden;}
-[data-testid="stDecoration"] {display: none;}
-[data-testid="stStatusWidget"] {display: none;}
 :root { color-scheme: dark; }
 html, body, [data-testid="stAppViewContainer"], .stApp {background:#071427; color:#EAF4FF;}
 [data-testid="stHeader"] {background:rgba(7,20,39,.88);}
@@ -82,14 +77,6 @@ div[data-testid="stMarkdownContainer"] h2,div[data-testid="stMarkdownContainer"]
  [data-testid="stMetricValue"] {font-size:1.35rem;}
  [data-testid="stHorizontalBlock"] {gap:.65rem;flex-wrap:wrap!important;}
  [data-testid="stColumn"], [data-testid="column"] {flex:1 1 100%!important;min-width:0!important;width:100%!important;}
-}
-
-/* FIX: default dark input text only; dashboard, metrics, navigation and charts untouched. */
-[data-testid="stTextInput"] input,
-[data-testid="stNumberInput"] input,
-[data-testid="stTextArea"] textarea {
-    color: #FFFFFF !important;
-    -webkit-text-fill-color: #FFFFFF !important;
 }
 </style>""", unsafe_allow_html=True)
 
